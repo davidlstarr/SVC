@@ -1,0 +1,21 @@
+.StepFourCharts {
+  .chart-body {
+    .chart-header {
+      &.ground-water {
+        .top-side {
+          display: flex;
+          justify-content: space-between;
+
+          .right-side {
+            width: 20%;
+
+            .see-table-wrapper {
+              display: flex;
+              justify-content: flex-end;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+@import '../../styles/variables.scss';
+
+.MuiDrawer-paper {
+  width: $drawerWidth;
+  box-sizing: border-box;
+  border-color: rgba(112, 112, 112, 0.3);
+  height: auto !important;
+  z-index: 0 !important;
+  position: relative !important;
+  & .MuiListItem-gutters:last-of-type {
+    margin-top: auto;
+  }
+}
+
+.logo {
+  background: $dark_blue;
+
+  img {
+    width: 100px;
+    height: 100px;
+    padding: 14px;
+  }
+}
+
+.MuiList-root {
+  padding-top: 0 !important;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.MuiListItem-gutters {
+  padding-top: 18px !important;
+  text-align: center !important;
+  color: $primary;
+  flex-direction: column;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+  cursor: pointer;
+  span {
+    font-weight: bold;
+  }
+}
+
+.MuiDrawer-docked {
+  width: $drawerWidth;
+  flex-shrink: 0;
+}

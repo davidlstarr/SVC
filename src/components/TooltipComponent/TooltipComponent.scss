@@ -1,0 +1,25 @@
+@import '../../styles/variables.scss';
+
+.more-info-icon {
+  .tooltip-icon {
+    display: flex;
+    height: 100%;
+    width: 100%;
+  }
+
+  .tooltip-container {
+    width: 65%;
+    background: #185281;
+    color: white;
+    --tooltipBackground: #185281;
+    font-size: 13px;
+    display: block;
+    a {
+      color: white;
+    }
+
+    &.full-width {
+      width: 100%;
+    }
+  }
+}

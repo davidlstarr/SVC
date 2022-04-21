@@ -1,0 +1,59 @@
+.search-datasets {
+  margin: 0rem 1.5rem;
+  h3 {
+    font-size: 18px;
+    color: #1c1c1c;
+    text-transform: uppercase;
+  }
+
+  label {
+    input {
+      width: 310px;
+      height: 36px;
+      font-size: 14px;
+      color: #8e8e8e;
+      border: 1px solid #c4c4c4;
+      border-radius: 4px;
+      padding: 0 1rem;
+    }
+  }
+}
+
+.selected-datasets-container {
+  margin: 0 1.5rem 2rem;
+
+  h4 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #919191;
+    margin-bottom: 0.5rem;
+  }
+
+  .selected-dataset {
+    display: flex;
+    span {
+      background: #6aabd4;
+      font-size: 14px;
+      font-weight: 600;
+      color: white;
+      padding: 0.6rem 0.7rem;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.2rem;
+
+      button {
+        background: none;
+        border: none;
+        display: flex;
+        padding: 0;
+        margin: 0;
+        margin-left: 0.5rem;
+        cursor: pointer;
+        font-size: 1.1rem;
+        color: white;
+      }
+    }
+  }
+}

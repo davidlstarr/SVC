@@ -1,0 +1,36 @@
+@import '../../../../styles/variables';
+
+.StepFourCharts {
+  .chart-body {
+    .chart-header {
+      &.line-chart {
+        border-bottom: none;
+        margin-bottom: 1rem;
+        margin-left: 2rem;
+
+        .top-side {
+          .left-side {
+            width: 65%;
+            h3 {
+              display: flex;
+              span {
+                color: $primary_grey;
+                font-size: 14px;
+                font-weight: 400;
+                display: flex;
+                align-items: center;
+                margin-left: 0.5rem;
+              }
+            }
+          }
+          .right-side {
+            justify-content: space-between;
+            .toggle-data {
+              width: 40%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

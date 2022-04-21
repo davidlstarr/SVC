@@ -1,0 +1,203 @@
+@import '../../styles/variables.scss';
+
+.StepFourCharts {
+  position: relative;
+
+  .chart-wrapper {
+    overflow: auto;
+    overflow-x: hidden;
+    background: $background;
+    min-width: 600px;
+    max-width: 600px;
+    height: 100vh;
+    flex-wrap: wrap;
+    padding: 10px 20px 10px 20px;
+    justify-content: center;
+
+    &.full-width {
+      min-width: calc(100vw - 622px);
+
+      .chart-body {
+        width: calc(100vw - 650px);
+      }
+    }
+
+    &.diplay-full-width-charts {
+      min-width: 99.5vw;
+    }
+  }
+
+  .chart-panel-icon {
+    position: absolute;
+    top: 50%;
+    right: -2.5rem;
+
+    background: white;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    box-shadow: 5px 0 8px rgba(0, 0, 0, 0.16) !important;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    &.active {
+      right: -0.5rem;
+      justify-content: center;
+    }
+
+    .arrow-icon {
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+      width: 15px;
+    }
+
+    .map-icon {
+      color: $primary;
+      font-size: 18px;
+      display: flex;
+    }
+
+    @media (max-width: 1580px) {
+      display: none;
+    }
+  }
+
+  .chart-body {
+    width: 100%;
+    height: 100%;
+    border: 1px solid $background;
+    border-radius: 20px;
+    padding: 0 2rem 0;
+    max-height: 600px;
+    overflow: auto;
+    overflow-x: hidden;
+    margin-bottom: 1rem;
+    background: white;
+
+    .chart-header {
+      border-bottom: 2px solid #707070;
+
+      .top-side {
+        display: flex;
+        align-items: center;
+        h3 {
+          font-size: 22px;
+          color: $primary;
+        }
+
+        .left-side {
+          width: 60%;
+          .chart-title {
+            font-size: 1rem;
+            position: relative;
+            top: -15px;
+          }
+        }
+
+        .right-side {
+          width: 50%;
+          display: flex;
+          justify-content: space-between;
+
+          .toggle-data {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            width: 55%;
+
+            .line {
+              height: 100%;
+              width: 35px;
+              display: flex;
+
+              span {
+                border: 1px solid rgba(255, 25, 25, 0.5);
+                width: 100%;
+                display: flex;
+              }
+            }
+
+            .toggle-data-label {
+              font-size: 14px;
+              color: $primary_grey;
+            }
+
+            .toggle-icon {
+              border: none;
+              background: none;
+              display: flex;
+              align-items: center;
+              cursor: pointer;
+            }
+          }
+        }
+
+        .see-table-wrapper {
+          button {
+            border: none;
+            background: none;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            color: $primary_grey;
+
+            .table-icon {
+              display: flex;
+              margin-left: 0.5rem;
+              font-size: 20px;
+            }
+          }
+        }
+      }
+
+      .bottom-side {
+        width: 72%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+        &.reduce-width {
+          width: 45%;
+        }
+
+        span {
+          font-size: 20px;
+          color: $primary_grey;
+          font-weight: 600;
+        }
+      }
+    }
+
+    .location-chart {
+      border-bottom: 2px solid rgba(112, 112, 112, 0.3);
+      height: 100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-right: 5rem;
+      &:last-child {
+        border-bottom: none;
+      }
+
+      span {
+        font-size: 18px;
+        color: $primary_grey;
+      }
+
+      .chart {
+        width: 80%;
+      }
+    }
+  }
+}
+.no-data {
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+  color: $primary_grey;
+  padding-bottom: 20px;
+}

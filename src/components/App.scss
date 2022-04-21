@@ -1,0 +1,106 @@
+@import '../styles/variables.scss';
+
+.app-container {
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+
+  @media (max-width: 1020px) {
+    display: none;
+  }
+
+  .content-container {
+    position: relative;
+    height: calc(100% - #{$header_height});
+    flex-grow: 1;
+  }
+  #download-container {
+    background: $background;
+  }
+  .side-panel-container {
+    display: flex;
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    transition: all 0.4s ease;
+    width: 0;
+    &.active {
+      -webkit-transform: translateX(-1px);
+      transform: translateX(-1px);
+      width: 540px;
+      z-index: 2;
+    }
+  }
+  .side-panel-icon {
+    background: white;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1000;
+    left: 25px;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    box-shadow: 5px 0 8px rgba(0, 0, 0, 0.16) !important;
+    &.active {
+      left: 520px;
+      top: 50%;
+      border-radius: 50%;
+      .esri-collapse__icon {
+        transform: rotate(180deg);
+      }
+    }
+    .svg-inline--fa {
+      font-size: 22px;
+      color: $primary;
+    }
+    .esri-collapse__icon {
+      color: $primary;
+      font-weight: bold;
+      font-size: 18px;
+      position: relative;
+      top: 1px;
+    }
+  }
+
+  .main-map-icon {
+    position: fixed;
+    top: 50%;
+    right: 0.5rem;
+
+    background: white;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    box-shadow: 5px 0 8px rgba(0, 0, 0, 0.16) !important;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    &.active {
+      right: 0.5rem;
+      justify-content: center;
+    }
+
+    .arrow-icon {
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+      width: 15px;
+    }
+
+    .map-icon {
+      color: $primary;
+      font-size: 18px;
+      display: flex;
+    }
+  }
+}
+iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}

@@ -1,0 +1,135 @@
+@import './variables.scss';
+
+.esri-component {
+  box-shadow: none !important;
+}
+.esri-widget {
+  color: $primary !important;
+  max-width: 100% !important;
+
+  &.esri-scale-bar {
+    background-color: #fff;
+    padding: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  .esri-button {
+    background-color: $primary;
+    border-color: $primary;
+
+    &:hover {
+      background-color: lighten($color: $primary, $amount: 5%);
+    }
+  }
+
+  .esri-widget--button,
+  &.esri-widget--button {
+    color: $primary;
+    width: 50px;
+    height: 50px;
+    box-shadow: none !important;
+
+    // icon
+    > span {
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+}
+
+.esri-zoom {
+  background-color: white;
+  border-top: none !important;
+  box-shadow: none !important;
+  justify-content: space-between;
+
+  .esri-widget--button {
+    border-top: none !important;
+    &:first-child {
+      margin-bottom: 5px;
+    }
+  }
+}
+.esri-expand {
+  .esri-icon-basemap {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='26' height='26'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M20.083 10.5l1.202.721a.5.5 0 0 1 0 .858L12 17.65l-9.285-5.571a.5.5 0 0 1 0-.858l1.202-.721L12 15.35l8.083-4.85zm0 4.7l1.202.721a.5.5 0 0 1 0 .858l-8.77 5.262a1 1 0 0 1-1.03 0l-8.77-5.262a.5.5 0 0 1 0-.858l1.202-.721L12 20.05l8.083-4.85zM12.514 1.309l8.771 5.262a.5.5 0 0 1 0 .858L12 13 2.715 7.429a.5.5 0 0 1 0-.858l8.77-5.262a1 1 0 0 1 1.03 0z' fill='rgba(35,114,179,1)'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: 12px 13px;
+    font-family: initial !important;
+    font-size: initial !important;
+    color: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+  .esri-icon-timeslider {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='26' height='26'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-8h4v2h-6V7h2v5z' fill='rgba(255,255,255,1)'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: 12px 13px;
+    font-family: initial !important;
+    font-size: initial !important;
+    color: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: $primary;
+  }
+
+  .esri-expand__container--expanded {
+    & > div > div > div > div {
+      font-size: 1em;
+      color: black;
+    }
+    .esri-widget--button > span {
+      display: block;
+    }
+    .esri-widget--button {
+      background-image: none;
+    }
+  }
+}
+
+.widget-selector-container {
+  margin-top: 10px;
+}
+
+.esri-time-slider__layout--compact {
+  .esri-time-slider__previous,
+  .esri-time-slider__animation,
+  .esri-time-slider__next {
+    width: auto;
+  }
+}
+.esri-expand .esri-expand__container--expanded .esri-widget--button > span {
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+}
+.esri-widget--button[aria-controls='timeslider-widget-wrapper_controls_content'] {
+  .esri-icon-collapse {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='26' height='26'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-8h4v2h-6V7h2v5z' fill='rgba(35,114,179,1)'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: 12px 13px;
+    font-family: initial !important;
+    font-size: initial !important;
+    color: transparent !important;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transform: rotate(0deg);
+  }
+}
+.esri-widget--button[aria-controls='timeslider-widget-wrapper_controls_content'] {
+  .esri-icon-collapse {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='26' height='26'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-8h4v2h-6V7h2v5z' fill='rgba(35,114,179,1)'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: 12px 13px;
+    font-family: initial !important;
+    font-size: initial !important;
+    color: transparent !important;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transform: rotate(0deg);
+  }
+}

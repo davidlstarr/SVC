@@ -1,0 +1,75 @@
+@import '../../styles/variables.scss';
+
+.ExportPrintButtons {
+  button {
+    cursor: pointer;
+    height: 63px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    color: white;
+  }
+
+  .search-datasets {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .top-print-btns {
+    margin: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    .download-btn {
+      background: #2372b3;
+      border: 1px solid #2372b3;
+      display: block;
+      width: 163px;
+      cursor: pointer;
+      height: 63px;
+      border-radius: 50px;
+      text-transform: uppercase;
+      color: white;
+      padding: 20px 38px;
+      text-decoration: none;
+    }
+
+    button {
+      font-size: 16px;
+      a {
+        color: white;
+        text-decoration: none;
+      }
+
+      &:first-child {
+        background: $primary;
+        border: 1px solid $primary;
+        width: 163px;
+
+        &:hover {
+          background: #1d5d91;
+        }
+      }
+
+      &:last-child {
+        background: #6aabd4;
+        border: 1px solid #6aabd4;
+        width: 214px;
+
+        &:hover {
+          background: #398cbf;
+        }
+      }
+    }
+  }
+
+  .bottom-print-btn {
+    margin: 1rem 1.5rem;
+
+    button {
+      font-size: 14px;
+      border: 2px solid #083a59;
+      color: #083a59;
+      width: 100%;
+      background: none;
+    }
+  }
+}

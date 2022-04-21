@@ -1,0 +1,115 @@
+@import '../../styles/variables.scss';
+
+.smooth-collapse-container {
+  margin-top: 0.1rem;
+  z-index: 10000;
+
+  .toggle-dropdown-btn {
+    cursor: pointer;
+    background: none;
+    border: none;
+    border-top: 1px solid #00000029;
+    padding: 1rem;
+    border-left: 7px solid $primary;
+    width: 100%;
+
+    .top-side {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+      color: #404040;
+
+      .left-side {
+        span {
+          font-size: 16px;
+          font-weight: bold;
+        }
+      }
+
+      .right-side {
+        display: flex;
+        align-items: center;
+        z-index: 1000;
+
+        .arrow-icon {
+          font-size: 1.5rem;
+          display: flex;
+          margin-left: 1rem;
+          cursor: pointer;
+        }
+      }
+    }
+    .description {
+      display: block;
+      text-align: start;
+      color: #808080;
+      font-size: 12px;
+      a {
+        text-decoration: underline;
+        color: #808080;
+      }
+    }
+  }
+
+  .smooth-collapse-dropdown {
+    .smooth-collapse-content {
+      padding: 1rem 1.5rem;
+
+      label {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 7% 84% 11%;
+
+        input {
+          cursor: pointer;
+          width: 19px;
+          height: 19px;
+        }
+
+        .label-text-wrapper {
+          color: #333333;
+          margin-left: 0.5rem;
+          display: grid;
+          grid-template-columns: 68% 5%;
+
+          span {
+            &:first-child {
+              font-size: 14px;
+            }
+
+            &:last-child {
+              font-size: 14px;
+            }
+          }
+        }
+
+        .arrow-icon {
+          cursor: pointer;
+          width: 50%;
+          display: flex;
+          justify-content: flex-end;
+          font-size: 1.5rem;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+
+.no-results {
+  margin: 0 1.5rem;
+  color: $primary_text_color;
+  text-transform: capitalize;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 0.8em;
+  .fa-pulse {
+    font-size: 45px;
+    color: $primary;
+  }
+}

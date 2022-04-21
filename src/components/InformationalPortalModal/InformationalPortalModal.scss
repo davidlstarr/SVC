@@ -1,0 +1,185 @@
+@import '../../styles/variables.scss';
+
+.modal-overlay {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  overflow: hidden;
+}
+.modal {
+  margin: 0;
+  padding: 16px 8px;
+  width: 800px;
+  border: 1px solid #e2e2e2;
+  border-radius: 4px;
+
+  @media (max-width: 1020px) {
+    width: 500px;
+    padding: 25px 8px;
+  }
+
+  @media (max-width: 500px) {
+    width: 400px;
+  }
+
+  @media (max-width: 414px) {
+    width: 350px;
+  }
+
+  @media (max-width: 320px) {
+    width: 300px;
+  }
+
+  .portal-modal-wrapper {
+    .close-modal-btn {
+      display: flex;
+      justify-content: flex-end;
+
+      @media (max-width: 1020px) {
+        display: none;
+      }
+
+      button {
+        border: none;
+        background: none;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        i {
+          font-size: 20px;
+          color: #5e5e5e;
+        }
+      }
+    }
+
+    .portal-modal-header,
+    .portal-modal-content {
+      width: 490px;
+      margin: 0 auto;
+
+      @media (max-width: 500px) {
+        width: 100%;
+      }
+    }
+
+    .portal-modal-header {
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: 350px;
+        border-radius: 50%;
+        margin-right: 16px;
+
+        @media (max-width: 1250px) {
+          width: 440px;
+        }
+
+        @media (max-width: 500px) {
+          width: 400px;
+        }
+      }
+      h3 {
+        font-size: 16px;
+      }
+    }
+
+    .portal-modal-content {
+      margin-top: 40px;
+      display: flex;
+      margin-bottom: 60px;
+      justify-content: space-between;
+
+      @media (max-width: 1020px) {
+        display: none;
+      }
+
+      @media (max-width: 1020px) {
+        flex-direction: row;
+        width: 70%;
+        margin: 30px auto 50px;
+      }
+
+      .left-side,
+      .right-side {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media (max-width: 500px) {
+          display: none;
+        }
+
+        img {
+          width: 190px;
+          height: 190px;
+          border-radius: 50%;
+          object-fit: fill;
+          margin-bottom: 30px;
+
+          @media (max-width: 1250px) {
+            display: none;
+          }
+        }
+
+        button {
+          width: 170px;
+          height: 52px;
+          border-radius: 113px;
+          font-size: 16px;
+          color: white;
+          font-weight: bold;
+          cursor: pointer;
+
+          @media (max-width: 1250px) {
+            font-size: 14px;
+            width: 160px;
+            height: 50px;
+          }
+        }
+      }
+      .left-side {
+        button {
+          background: $primary;
+          border: 1px solid $primary;
+
+          &:hover {
+            background: transparent linear-gradient(258deg, #242c80 0%, #3fa9eb 100%) 0% 0% no-repeat padding-box;
+          }
+        }
+      }
+      .right-side {
+        button {
+          background: #242c80;
+          border: 1px solid #242c80;
+
+          &:hover {
+            background: transparent linear-gradient(255deg, #242c80 0%, #2372b3 100%) 0% 0% no-repeat padding-box;
+          }
+        }
+      }
+    }
+
+    .portal-modal-footer {
+      width: 85%;
+      margin: 0 auto;
+      p {
+        color: $primary_text_color;
+        font-size: 12px;
+      }
+      .desktop-screen {
+        @media (max-width: 1020px) {
+          display: none;
+        }
+      }
+      .mobile-screen {
+        display: none;
+        @media (max-width: 1020px) {
+          display: block;
+        }
+      }
+    }
+  }
+}
